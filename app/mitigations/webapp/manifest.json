@@ -15,6 +15,18 @@
       "version": "1.10.0",
       "toolsId": "e55bb1f6-6921-494c-8c9d-6e50f3be168a"
     },
+    "crossNavigation": {
+      "inbounds": {
+        "Mitigations-display": {
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          },
+          "semanticObject": "Mitigations",
+          "action": "display"
+        }
+      }
+    },
     "dataSources": {
       "mainService": {
         "uri": "/service/risk/",
@@ -91,9 +103,7 @@
         "controlId": "app",
         "controlAggregation": "pages",
         "bypassed": {
-          "target": [
-            "notFound"
-          ]
+          "target": ["notFound"]
         },
         "async": true
       },
@@ -101,16 +111,12 @@
         {
           "pattern": "",
           "name": "worklist",
-          "target": [
-            "worklist"
-          ]
+          "target": ["worklist"]
         },
         {
           "pattern": "Mitigations/{objectId}",
           "name": "object",
-          "target": [
-            "object"
-          ]
+          "target": ["object"]
         }
       ],
       "targets": {
@@ -142,5 +148,13 @@
       "async": true,
       "id": "app"
     }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "cpapp.service"
   }
 }
